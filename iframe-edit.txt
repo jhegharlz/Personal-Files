@@ -1,0 +1,4 @@
+$('iframe').load( function() {
+    $('iframe').contents().find("body")
+      .append($("<h1>Dili ko mo duwa</h1>"));
+});

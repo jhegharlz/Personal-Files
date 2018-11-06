@@ -1,0 +1,73 @@
+HTML:
+<div id="imagescontainer">
+<div id="opentoms" class="showimages" align="center">
+    <a href="#" class="close-modal">×</a>
+    <h2 style="text-align: center">Toms Eyewear</h2>
+<img src="//my.imatrix.com/0017051/storage/app/media/tomsimage01.jpg"><img src="//my.imatrix.com/0017051/storage/app/media/tomsimage02.jpg">
+</div>
+</div>
+
+CSS:
+
+#imagescontainer {
+    z-index: 9999;    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility:hidden;
+    display:none;
+    background-color: rgba(22,22,22,0.5);
+    cursor: pointer;
+}
+.showimages {
+    background:#e1e1e1; 
+    margin: 0 auto;
+    width:100%; 
+    max-width: 900px;
+    position:relative; 
+    z-index:41;
+    top: 20%;
+    padding:30px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+.showimages img{
+    padding: 10px;
+}
+
+@media(max-width: 519px) {
+.showimages {
+    top: 0;
+    }
+}
+a.close-modal {
+    right: 10px;
+    position: absolute;
+    top: -5px;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+
+SCRIPT:
+
+setTimeout(function(){
+$('#imagescontainer').appendTo('.page-layout')
+},500);
+
+$('#toms').mouseover(function(){
+    $('#imagescontainer').css('visibility','visible');
+    $('#imagescontainer').css('display','block');
+});
+
+$('#toms').mouseout(function(){
+    setTimeout(function(){
+    $('#imagescontainer').css('visibility','hidden');
+    $('#imagescontainer').css('display','none');
+    },5000);
+});
+
+$('.close-modal').click(function(){
+    $('#imagescontainer').hide();
+});

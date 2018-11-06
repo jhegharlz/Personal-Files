@@ -1,0 +1,48 @@
+ titles = $('#followerPanel > div.vfButtonBar > div > h3').text();
+ setInterval(function(){
+if(titles === 'Followers'){
+    window.close();
+}
+ }, 1000);
+
+
+// var x = 0;
+// $('#fchArea > table > tbody > tr > td').each(function(){
+// var links = $(this).find('a').attr('href');
+//     if (links !== undefined){
+// if (x < 20) {  
+//     x++;
+// window.open('https://na43.salesforce.com' + links);
+// test = 'https://na43.salesforce.com' + links;
+// console.log(test);
+// } }
+// });
+
+
+var checking = $('#00NF000000CsZLD_ileinner img').attr('src');
+ if(checking !== '/img/checkbox_checked.gif'){
+jQuery(function(){
+$('#00NF000000CsZLD_ilecell').attr('class','dataCol col02 inlineEditWriteOn');
+$('#00NF000000CsZLD_ileinner').dblclick();
+});
+
+setInterval(function(){
+$('#00NF000000CsZLD').prop('checked',true);
+}, 500);
+setInterval(function(){
+$('#topButtonRow > input:nth-child(1)').click();
+}, 500);
+}
+    if(checking === '/img/checkbox_checked.gif'){
+    window.close();
+    }
+    
+
+title = $('#ep > div.pbHeader > table > tbody > tr > td.pbTitle > h2').text();
+if (title !== 'Order Detail') {
+    window.close();
+}
+if (window.location.href === 'https://na43.salesforce.comundefined'){
+    alert();
+    window.close();
+}

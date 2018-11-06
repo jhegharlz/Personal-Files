@@ -1,0 +1,7 @@
+function vidAutoplay() {
+
+document.getElementById('techvid').play();
+
+}
+
+window.onload = vidAutoplay;

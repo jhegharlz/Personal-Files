@@ -1,0 +1,5 @@
+setInterval(function(){
+$('.slider__video video').prop('muted', true);    
+$('.slider__video video').attr('autoplay', true);
+$('.slider__video video')[0].play();
+},500);

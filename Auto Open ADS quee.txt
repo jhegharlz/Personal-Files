@@ -1,0 +1,9 @@
+var x = $('.bPageBlock .reportOutput .tabularReportTable .breakRowClass0Top > td span.recordcount').first().text();
+  if(x === null || x === '' || x === undefined)
+     { $('title').text('No ADS Queue'); }
+  else 
+     { $('title').text('ADS has ' + x );
+       $('#fchArea > table > tbody > tr:nth-child(4) > td:nth-child(3) > a').attr('target','_blank');
+       $('#fchArea > table > tbody > tr:nth-child(4) > td:nth-child(3) > a')[0].click();
+     } 
+setInterval(function(){ location.reload(); }, 20000);

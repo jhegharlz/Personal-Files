@@ -1,0 +1,9 @@
+setInterval(function(){
+datacheck = $('form .option:nth-child(3) input[type="radio"]').prop('checked');
+if(datacheck === true) {
+   $('#custom_form > div:nth-child(13)').attr('style','display: block');
+}
+if(datacheck === false){
+    $('#custom_form > div:nth-child(13)').attr('style','display: none');
+}
+},500);

@@ -1,0 +1,4 @@
+ul.home_box_container.clearfix {
+    margin-top: 0px !important;
+
+}

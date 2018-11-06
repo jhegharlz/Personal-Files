@@ -1,0 +1,3 @@
+<p><script type="text/javascript">
+window.location = "http://healthcoachdoctor.com/new-client-center/becoming-a-new-client.html"
+</script></p>

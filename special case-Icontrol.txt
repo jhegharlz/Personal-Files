@@ -1,0 +1,16 @@
+var y = window.location.href.slice(0,70);
+console.log(y);
+if (y === 'https://admin.imatrixbase.com/icontrol/clients/client_details.php?cid='){
+ window.location = $ ('.btn_pnl a').first().attr('href');   
+}
+
+var x = window.location.href.slice(0,54);
+if (window.location.href === 'https://admin.imatrixbase.com/icontrol/dashboard.php') {
+    window.location = $('#website').attr('href');
+}
+if (window.location.href === 'https://admin.imatrixbase.com/icontrol/content/pages.php') {
+    window.location = 'https://admin.imatrixbase.com/icontrol/custom_content.php?id=17'
+}
+$('#submit > input:nth-child(4)').click(function(){
+ //window.open('https://admin.imatrixbase.com/icontrol/admin_back_login.php?userset=superadmins');
+});

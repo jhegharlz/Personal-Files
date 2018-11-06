@@ -1,0 +1,17 @@
+<p align="center">
+<div class="vid_image" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+   <img src="//my.imatrix.com/0020929/storage/app/media/youtube_thumb.jpg" style="cursor:pointer" />
+</div>
+<div class="vid_size" style="display:none">
+    <iframe style="max-width: 750px" width="100%" height="422" src="https://www.youtube.com/embed/q7WdPiFpZys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+</p>
+
+
+/*script*/
+
+$('.vid_image').click(function(){
+    current_url = $('.vid_size iframe').attr('src');
+    autoplay_url = current_url + '?autoplay=1';
+    $('.vid_size iframe').attr('src', autoplay_url);
+}); 

@@ -1,0 +1,67 @@
+HTML
+
+<div class="custom_slide">
+<div class="item-1"><br />
+Robert E. - &quot;I really appreciate everyone that works there, their friendly and professional help never fails to help me feel better.&quot;</div>
+
+<div class="item-2"><br />
+Alice M. - &quot;I take my kids there regularly, and it has made a world of difference for my 5 year old daughter&#39;s ear infections.&quot;</div>
+
+<div class="item-3"><br />
+Rebecca T. - &quot;The staff and doctors are very friendly, comforting and personal.&quot;</div>
+</div>
+
+
+CSS
+
+.custom_slide {
+    position: inherit;
+    text-align: center;
+    display: block;
+}
+
+
+.item-1, 
+.item-2, 
+.item-3 {
+  
+  width: 100%;
+  
+  font-size: 1.2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+        margin-top: -73px;
+}
+
+.item-3{
+	animation-name: anim-3;
+        margin-top: -75px;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}

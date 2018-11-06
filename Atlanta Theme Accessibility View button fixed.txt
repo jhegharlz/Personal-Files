@@ -1,0 +1,17 @@
+CSS:
+.ada_toolbar .ada_toolbar--content:before {
+    bottom: 8px;
+}
+
+.ada_toolbar.left {
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+.ada_toolbar.left .ada_toolbar--opener {
+    padding: 0px 15px 7px 0px;
+    transform: rotate(180deg);
+}
+.ada_toolbar.left .ada_toolbar--opener:before {
+ display: none;
+}

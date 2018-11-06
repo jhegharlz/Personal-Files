@@ -1,0 +1,75 @@
+var caseowner = 'ADS'
+var x = 0;
+var y = 0;
+var findynum = 0;
+var clickstart = 0;
+var totalads = 0;
+var findy = 0;
+var recordcount = 0;
+
+$('#fchArea > table > tbody > tr > td').each(function(){
+   var adsvalue = $(this).find('span.groupvalue > a').text();
+   if (adsvalue === caseowner){
+     var adsrecordcount = $(this).find('strong > span.recordcount').text();
+     recordcount = parseInt(adsrecordcount.slice(2,4));
+     console.log(caseowner + ' Task = ' + recordcount);
+   }
+});
+
+$('#fchArea > table > tbody > tr > td > span > a').each(function(){
+    var findx = $(this).text();
+     x++;
+if (findx === caseowner) {
+    y = x;
+    console.log ('Name Position = ' + x);
+    return;
+}
+});
+
+$('#fchArea > table > tbody > tr > td > strong > span').each(function(){
+     
+    var findy = $(this).text();
+    if(y !== 1) {
+            y--;
+    findy = parseInt(findy.slice(2,4));
+    findynum = findynum + findy;
+    return;
+    }
+    else {
+            clickstart = findynum + 1;
+            console.log ('Clicking Start = ' + clickstart);
+    }
+});
+
+var clickend = clickstart + recordcount - 1;
+var mytrap = recordcount;
+var starting = 0;
+var counter = 0;
+console.log ('Clicking End = ' + clickend);
+
+
+$('#fchArea > table > tbody > tr > td').each(function(){
+var groupvalue = $(this).find('a').text();
+var datavalue = groupvalue.slice(0,2);
+if (datavalue === '00') {
+    var href = $(this).find('a').attr('href');
+    //console.log(href);
+    starting++;
+    if (clickstart === starting){
+        if (recordcount > counter){
+            counter++
+            console.log(href);
+            starting--;
+    window.open(href + '/a?newOwn=Harold%20Lanojan');
+        }
+    }
+}
+});
+
+setInterval(function(){  
+var z = 0;
+if ( z === 0 ) {
+    $('#bottomButtonRow input')[0].click();
+   	z = 1;
+}}, 500);
+setInterval(function(){ location.reload(); }, 2000);

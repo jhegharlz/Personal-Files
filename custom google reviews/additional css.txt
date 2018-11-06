@@ -1,0 +1,102 @@
+<style>
+#google-reviews {
+    display: block!important;
+    clear: both;
+}
+#custom_iframe_outer {
+    width: 274px;
+    height: 266px;
+    overflow: hidden;
+    position: relative;
+}
+
+#custom_iframe {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 132%;
+    height: 66350px;
+}
+a.reviewbutton {
+    border-style: solid;
+    border-width: 0px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1.0625rem;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    background-color: #df4a32;
+    border-color: #c93118;
+    color: white;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+    padding-top: 1.0625rem;
+    padding-bottom: 1rem;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 4px solid #c93118!important;
+    z-index: 100;
+    border-radius: 5px;
+}
+a.reviewbutton img {
+    width: 20px;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
+.halfColumn {
+    width: 50%;
+    float: left;
+}
+#leaveReview {
+    float: right;
+}
+.halfColumn h1 {
+    font-size: 24px;
+    line-height: 0.9;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: -2px;
+}
+#businessAddress {
+    word-wrap: normal;
+    max-width: 150px;
+    height: auto;
+}
+
+p.businessAddress {
+    font-size: 12px;
+    color: #999;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+.review-text {
+    max-width: 46em!important;
+}
+.review-item {
+    background: #fff;
+    border-radius: 5px;
+}
+.review-stars ul {
+    margin: 0!important;
+}
+.review-stars {
+font-size: 200%;
+}
+.review-author {
+    font-size: 130%;
+}
+.review-date {
+    margin-top: 5px;
+}
+</style>

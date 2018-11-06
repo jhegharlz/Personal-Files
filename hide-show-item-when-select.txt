@@ -1,0 +1,12 @@
+setInterval(function(){
+var select = $ ('#field_17').val();
+console.log (select);
+if (select === 'No' || select === '') {
+    $('#custom_form > div:nth-child(21)').hide();
+    console.log ('GOOD');
+}
+if (select === 'Yes') {
+    $('#custom_form > div:nth-child(21)').show();
+    console.log ('YES');
+}
+}, 500);

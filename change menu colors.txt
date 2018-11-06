@@ -1,0 +1,75 @@
+<script type="text/javascript" src="<relative path to file>wsLaunch.js"></script>
+
+<style type="text/css">
+div.custom_content_module_3 .cc_module_content .follow_us a.instagram_icon {
+   background-attachment: scroll;
+   background-clip: border-box;
+   background-color: #898989 ;
+   background-image: url("http://my.imatrixbase.com/beautifeye.org/images/instagram_icon.png");
+   background-origin: padding-box;
+   background-position: 50% center;
+   background-repeat: no-repeat;
+   background-size: auto auto;
+}
+
+
+p{font-family: tahoma, geneva, sans-serif; font-size: 18px; color:
+rgb(128, 128, 128);}
+
+h2{font-family: tahoma, geneva, sans-serif; font-size:22px;
+font-weight:bold;color:#252561;}
+
+h3{font-family: tahoma, geneva, sans-serif; font-size:20px;
+font-weight:bold;color:#252561;}
+
+
+.home_box.first_home_box{background-color:#252561 !important;}
+.home_box.third_home_box{background-color:#66D7D5 !important;}
+
+
+#btn-tab01{background-color:#252561 !important;}
+#btn-tab02{background-color:#66D7D5 !important;}
+
+
+span#menuWrap {
+    padding-left: 5%;
+}
+
+#custom_content_menu > li.selected > a > span {
+color: #fff !important;
+
+}
+
+#custom_content_menu > li:nth-child(2) > a > span:hover {
+color: #fff !important;
+
+}
+
+#custom_content_menu > li:nth-child(3) > a > span:hover {
+color: #fff !important
+}
+#custom_content_menu > li:nth-child(4) > a > span:hover {
+color: #fff !important
+}
+
+#custom_content_menu > li:nth-child(5) > a > span:hover {
+color: #fff !important
+}
+
+#custom_content_menu > li:nth-child(6) > a > span:hover {
+color: #fff !important
+}
+
+#custom_content_menu > li:nth-child(7) > a > span:hover {
+color: #fff !important
+}
+
+.sf-menu li.selected a {
+    background: #5a5d63;
+}
+
+.sf-menu li:hover a{
+    background: #5a5d63;
+
+
+</style>

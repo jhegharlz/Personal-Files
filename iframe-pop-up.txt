@@ -1,0 +1,12 @@
+$('header').prepend('<a id="onclick_custom" href="C:/Users/cr54.harold/Desktop/Harold/Important%20Files/%5ECE27DEF548EFDB8809988A49AF755BF8293DB1FB835F5A6118%5Epimgpsh_fullsize_distr/index.html" class="iframe" target="_blank"></a>'); 
+
+
+$(document).ready(function() {
+    $(".iframe").fancybox({
+        type: 'iframe'
+    });
+});
+
+
+$("#onclick_custom").trigger('click');
+

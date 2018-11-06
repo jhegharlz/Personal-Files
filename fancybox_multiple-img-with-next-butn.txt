@@ -1,0 +1,14 @@
+Script:
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.js">
+</script>
+<script>
+$(document).ready(function() {
+	$(".iframe").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+
+HTML:
+<div class="gallery-images"><a class="iframe" href="/clients/18280/images/gallery/gallery01.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery01-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery02.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery02-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery03.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery03-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery04.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery04-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery05.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery05-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery06.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery06-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery07.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery07-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery08.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery08-200x200.jpg" width="200" /> </a> <a class="iframe" href="/clients/18280/images/gallery/gallery09.jpg" rel="gallery1"><img height="200" src="/clients/18280/images/gallery/gallery09-200x200.jpg" width="200" /> </a></div>

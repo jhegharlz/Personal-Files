@@ -1,0 +1,52 @@
+$(document).ready(function() { $('class/ID selector').append('content'); }); 
+
+TRANSFER to last
+<script>
+$(document).ready(function(){
+var thing = $('.aahalogo');
+thing.appendTo('.logo');
+});
+</script>
+
+CLONE to first
+<script>
+$(document).ready(function(){
+var thing = $('.social');
+thing.clone().prependTo('.business-phone');
+});
+</script>
+
+<script>
+$(document).ready(function(){
+var thing = $('.search-form .wrapper-module .pageOptionsWrap ul li:nth-child(0n+4) a');
+thing.replaceWith('<a href="http://apacheanimal.com/request-appointment.html" title="Request Appointment" rel="nofollow"><span>Request Appointment</span></a>');
+});
+</script>
+
+
+Activate JS on Portal
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+'/themes/website/assets/client/js/custom.js'
+<script src="http://my.imatrix.com/0004295/themes/website/assets/client/js/custom.js"></script>
+
+Replaced ALL
+$(document).ready(function(){
+var thing = $('.category__description > p:nth-child(5)');
+thing.replaceWith('<p>This section contains a partial list of some of the most common conditions Physical Therapy can help with. If you do not see your specific condition listed, we encourage you to give us a call so we can personally address your particular concerns.</p>');
+});
+
+$(document).ready(function(){
+$('.category__description > p:nth-child(3)').text($('.category__description > p:nth-child(3)').text().replace(/Chiropractic care/g,"Physical Therapy"));
+});
+
+FIND and Replaced
+$(document).ready(function(){
+$('.article__post-content').find("p").first().remove();
+
+$('.article__post-content p').each(function(){ var text = $(this).text(); $(this).text(text.replace(/Chiropractors/g,"Physical Therapist")); });
+});
+
+Removed
+$(document).ready(function(){
+$('div.wrap-item:nth-child(2)').remove();
+});

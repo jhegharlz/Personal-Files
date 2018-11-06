@@ -1,0 +1,4 @@
+setTimeout(function(){
+$('.bx-wrapper .bx-controls-direction a').attr('style','display: block;');
+}, 500);
+$('li').hover(function(){},function(){$('a.bx-next').click();});

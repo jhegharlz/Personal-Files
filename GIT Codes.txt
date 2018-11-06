@@ -1,0 +1,7 @@
+git status
+git config -l
+git init
+git remote add origin https://github.com/jhegharlz/Online-Store.git
+git add *
+git commit -m "project"
+git push origin master / git push -f origin master

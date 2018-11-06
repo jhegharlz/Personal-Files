@@ -1,0 +1,11 @@
+var hayFlash = function(a,b){try{a=new ActiveXObject(a+b+'.'+a+b)}catch(e){a=navigator.plugins[a+' '+b]}return!!a}('Shockwave','Flash')
+  setTimeout(function(){
+     
+  if(hayFlash) {
+    /*alert("Flash Player is installed");*/
+  }
+  else {
+      $('.lnch3dspine').replaceWith('<a href="http://www.macromedia.com/go/getflash/" class="get-flash" title="Update Flash Player"><button class="lnch3dspine">Launch the Simulator</button></a>');
+    /*alert("Your browser doesn't have Flash Player installed");*/
+  }
+  },1000);

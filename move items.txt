@@ -1,0 +1,8 @@
+
+.slider .wrapper .slideshow_text {
+	top: 75%;
+}
+
+.search-form .wrapper-module .search {
+	width: 100%;
+}

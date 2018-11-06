@@ -1,0 +1,10 @@
+<style type="text/css">
+
+body {
+    font-family: tahoma;
+    font-size: 14px;
+}
+body {
+    background: url("/clients/11472/images/bg9.png") repeat scroll 0 0 transparent;
+}
+</style>

@@ -1,0 +1,77 @@
+WEB Tutorial:
+http://fancyapps.com/fancybox/
+
+CDN:
+https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.css
+https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.js
+
+HTML
+<a id="onclick_custom" href="http://my.imatrix.com/0003000/storage/app/media/589cc6dce06ec_L46JE44NQYAVSangsterN021.jpg" class="iframe"></a>
+
+
+
+<script>
+
+$(document).ready(function(){
+$("#onclick_custom").trigger('click');
+});
+
+</script>
+
+
+JS:
+$(document).ready(function() {
+    $(".iframe").fancybox({
+        type: 'iframe'
+    });
+});
+
+
+*******************************************************************
+HTML:
+<a id="onclick_custom" href="http://my.imatrix.com/0003000/storage/app/media/pop-up_image.png" class="iframe"></a>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+$("#onclick_custom").trigger('click');
+
+});
+
+</script>
+
+JS:
+$(document).ready(function() {
+
+    $(".iframe").fancybox({
+
+		openEffect	: 'none',
+
+		closeEffect	: 'none'
+
+    });
+});
+
+CSS:
+.fancybox-inner {
+
+    width:100%!important;
+
+    height:100%!important;
+
+    max-width: 774px!important;
+
+    max-height: 190px!important;
+}
+
+.fancybox-wrap {
+
+    width: 90%!important;
+
+    max-width: 774px!important;
+
+    max-height: 190px!important;
+}

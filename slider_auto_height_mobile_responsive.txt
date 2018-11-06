@@ -1,0 +1,8 @@
+setInterval(function(){
+widthx = $(window).width();
+heightx = (670 * widthx) / 1600 - 10;
+
+$('.wrap__slider .bx-viewport').css('max-height', heightx);
+$('.wrap__slider--inner .slider__image').css('max-height', heightx);
+
+},500);

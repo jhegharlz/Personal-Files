@@ -1,0 +1,19 @@
+$('ul.bxslider > li').click(function(){
+    var findloc = $(this).attr('style').slice(50,71);
+    console.log(findloc);
+    if (findloc === '599ca9a1b6f58_graphic') {
+    window.location.href = window.location.href + 'our-specialties';
+    }
+    if (findloc === '599cab453733a_graphic') {
+    window.location.href = window.location.href + 'about';
+    }
+    if (findloc === '599cab6396a0e_graphic') {
+    window.location.href = window.location.href + 'our-services';
+    }
+    if (findloc === '599cab8986224_graphic') {
+    window.location.href = window.location.href + 'testimonials';
+    }    
+    if (findloc === '599ca2dec0383_graphic') {
+    window.location.href = window.location.href + 'optical-services';
+    }
+});

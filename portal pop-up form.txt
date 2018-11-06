@@ -1,0 +1,96 @@
+-----------------------
+JS
+-----------------------
+<script>
+(function (s, o, h, g, r, a, m) {
+    a = s.createElement(o); m = s.getElementsByTagName(h)[0];
+    a.async = 1; a.src = g; m.appendChild(a);
+})(document, 'script', 'head', 'https://smbleads.internetbrands.com/v1/leads/create_form/WF1_0J2qWU4NQwe5v7HJs8Xy');
+</script>
+-----------------------
+HTML
+-----------------------
+<div class="pop_up-wrap">
+<div class="pop_up-wrap-inner">
+<div class="pup_up-wrap_x"><a href="#">X</a></div>
+<div class="page_content">
+<div class="custom_form">
+<h2 style="font-size: 18px!important;"><strong>Sign up for our Newsletter! </strong></h3>
+<p style="text-align: center">We give healthy recipes, exercises, and more! </p>
+<div class='leadForm_WF1_0J2qWU4NQwe5v7HJs8Xy'></div>
+</div>
+</div></div>
+</div>
+-----------------------
+CSS
+-----------------------
+.pop_up-wrap {
+    z-index: 999;
+    width: 100%;
+    max-width: 288px;
+    max-height: 464.5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.pop_up-wrap {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.pop_up-wrap {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.pup_up-wrap_x {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border: 4px #16a2b2 solid;
+    border-radius: 100%;
+    position: absolute;
+    right: 0%;
+    top: -4%;
+    background-color: white;
+    transition: .2s;
+}
+.pup_up-wrap_x a{
+font-size: large;
+}
+
+.pop_up-wrap .leadForm {
+    font-size: 12px;
+}
+
+.custom_form {
+    width: 100%;
+    float: left;
+    padding: 23px;
+}
+-----------------------
+Jquery
+-----------------------
+$('.pup_up-wrap_x').on('click', function() {
+    $(this).parent().fadeOut('slow');
+  });

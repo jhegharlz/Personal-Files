@@ -1,0 +1,14 @@
+setTimeout(function(){
+$('a').each(function(){
+$(this).text( $(this).text().replace(/\%20/g, ' ') );
+$(this).text( $(this).text().replace(/\%2C/g, ',') );
+$(this).text( $(this).text().replace(/\%3F/g, '?') );
+});
+
+$('.blog__post-title').each(function(){
+$(this).text( $(this).text().replace(/\%20/g, ' ') );
+$(this).text( $(this).text().replace(/\%2C/g, ',') );
+$(this).text( $(this).text().replace(/\%3F/g, '?') );
+});
+
+},500);

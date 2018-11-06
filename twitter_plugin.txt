@@ -1,0 +1,5 @@
+<div style="max-width:650px; width: 100%;margin: 0 auto;">
+<p style="float:left;margin-right: 20px;">
+<a class="twitter-timeline" data-height="400" data-width="300" href="https://twitter.com/SkaggsChiroLLC?ref_src=twsrc%5Etfw">Tweets by ?@SkaggsChiroLLC</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>

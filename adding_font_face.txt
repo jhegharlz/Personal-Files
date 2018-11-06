@@ -1,0 +1,6 @@
+<style>
+@font-face{
+font-family:"avenir-next-medium";
+src: url(avenir-next-medium-webfont.woff);
+}
+<style>

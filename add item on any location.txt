@@ -1,0 +1,18 @@
+<script>
+$(document).ready(function(){
+var thing = $('.aahalogo');
+thing.appendTo('.logo');
+});
+</script>
+
+
+
+<div class="addheader"><span><a href="https://connect.allydvm.com/pet/pet_calls/sign_in" target="_blank"><img src="/clients/11443/images/pet-app1.png" style="width: 50px; height: 50px;" /></a></span></div>
+
+
+<script>
+$(document).ready(function(){
+var thing = $('.social');
+thing.clone().prependTo('.business-phone');
+});
+</script>

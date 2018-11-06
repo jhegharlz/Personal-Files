@@ -1,0 +1,13 @@
+$(document).ready(function(){
+    $('.navigation__item a').each(function(){ var text = $(this).text(); $(this).text(text.replace(/Massage and Body Care/g,"Body Care")); });
+    $('.articles__categories-item a').each(function(){ var text = $(this).text(); $(this).text(text.replace(/Massage and Body Care/g,"Body Care")); });
+    $('.article__post-info span').each(function(){ var text = $(this).text(); $(this).text(text.replace(/Massage and Body Care/g,"Body Care")); });
+    $('.articles__breadcrumbs li').each(function(){ var text = $(this).text(); $(this).text(text.replace(/Massage and Body Care/g,"Body Care")); });
+});
+
+var removemassage = window.location.href.slice(48,53)
+var removemassagelive = window.location.href.slice(50,55)
+
+if (removemassage === '41141' || removemassagelive === '41141') {
+    $('.articles__list li:nth-child(2)').remove();
+}

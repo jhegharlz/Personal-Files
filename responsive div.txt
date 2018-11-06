@@ -1,0 +1,5 @@
+add to last class or the div div div div div
+
+max-width: 160px!important;
+
+display: inline-block!important;

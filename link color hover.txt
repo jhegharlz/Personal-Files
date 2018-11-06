@@ -1,0 +1,3 @@
+.exclusive-offer-module .custom_content_module_1 .cc_module_content .exclusive_offer .quote a {color: #6ccbd9}
+
+.exclusive-offer-module .custom_content_module_1 .cc_module_content .exclusive_offer .quote a:hover {color: #fff}

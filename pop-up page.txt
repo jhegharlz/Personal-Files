@@ -1,0 +1,32 @@
+ <img src="//www.demandforced3.com/b/css/1.0/images/bttn_easyscheduler120.png" 
+style="cursor: pointer;" name="scheduler_tile" id="scheduler_tile_s" 
+onclick="javascript:window.open('//local.demandforce.com/b/hbssalon/schedule?widget=1','newwindow', 
+'width=790px, height=800px, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1, location=no, status=0');" />
+
+*************************************************************************************************************
+Skin_15a
+
+
+HTML
+<p style="text-align: center;"><img alt="" onclick="javascript:window.open('http://spinalsense.com/images/digital-xray-at-NCWC.jpg','newwindow', 
+'width=50%, height=800px, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1, location=no, status=0');" src="http://spinalsense.com/images/digital-xray-at-NCWC.jpg" style="width: 100%; cursor:pointer" /></p>
+
+
+CSS
+
+.fancybox-inner {
+    width: 1131px!important;
+    height: 900px!important;
+
+}
+
+.fancybox-wrap {
+    width: 1131px!important;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20pximportant;
+    opacity: 1;
+    overflow: visible;
+}
+*************************************************************************************************************

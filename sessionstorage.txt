@@ -1,0 +1,18 @@
+setTimeout(function(){
+    var cute
+    var harold = sessionStorage.getItem("cute");
+    console.log(harold);
+if (harold == 'gwapo') {
+    $('#tpopup').attr('style','display:none!important');
+    console.log('handsome');
+}
+else {
+     console.log('Not Handsome');
+}
+
+if(typeof(Storage) !== "undefined"){
+    if(sessionStorage){
+    sessionStorage.setItem("cute","gwapo");
+    }
+}
+},0);

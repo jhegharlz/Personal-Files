@@ -1,0 +1,21 @@
+<div>
+<div class="halfColumn">
+<h1 id="businessName">Prudhomme Vision</h1>
+
+<p class="businessAddress" id="businessAddress">194 Buckland Hills Dr, Manchester, CT 06042, USA</p>
+</div>
+
+<div id="leaveReview"><a class="reviewbutton left" href="https://maps.google.com/?cid=11619951705740071197" style="background-color: #df4a32; " target="_blank">Leave a Review <img alt="Leave Review icon" src="https://www.netrite.net/google-review-code/img/leave-review-icon.png" /></a></div>
+</div>
+
+<div id="google-reviews"></div>
+<link href="https://my.imatrixbase.com/prudhommevision.com/google-places.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://my.imatrixbase.com/prudhommevision.com/google-places.js"></script><script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBSYrPiZu6_aQHxAdz1HyCZaMLjJfLgcY0&signed_in=true&libraries=places"></script><script>
+jQuery(document).ready(function( $ ) {
+   $("#google-reviews").googlePlaces({
+        placeId: 'ChIJA0sLQb5X5okRHdHU34JcQqE' //Find placeID @: https://developers.google.com/places/place-id
+      , render: ['reviews']
+      , min_rating: 4
+      , max_rows: 10
+   });
+});
+</script>

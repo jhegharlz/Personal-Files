@@ -1,0 +1,5 @@
+$('link[href*="/images/brands/vet/common/favicon.ico"]').remove();
+
+setTimeout(function(){
+$('head').append('<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/windows/2x/google-logo.png"/>');
+},1000);

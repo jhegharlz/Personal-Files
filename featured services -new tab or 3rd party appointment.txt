@@ -1,0 +1,124 @@
+<center><a class="iframe" href="http://www.demandforced3.com/b/etile_scheduler_popup.jsp?d3cp_exid=wholehealthchiro&amp;d3cp_source=My%20Website%27,%27newwindow%27,%20%27width=790px,%20top=0,%20left=0,%20toolbar=no,%20menubar=no,%20scrollbars=1,%20resizable=1,%20location=no,%20status=0"><dl2>
+<article> <dt2>Request An Appointment<br />
+<br />
+&nbsp;
+<p style="font-size: 1.125rem; font-weight: 400; line-height: 1.4em; margin: 5px 0 5px 0;padding-bottom: 40px;">We will do our best to accommodate your busy schedule. Schedule an appointment today!</p>
+<dd2></dd2></dt2></article>
+</dl2> </a></center>
+
+<article>
+<dl>
+	<dt><a href="%ABS_URL%services.html">Read About Our Services</a></dt>
+	<dd>We strive to provide complete care for our patients. Learn more about all the services we provide.</dd>
+	<dd></dd>
+</dl>
+</article>
+
+<article>
+<dl>
+	<dt><a href="http://www.demandforced3.com/b/etile_reviews_popup.jsp?d3cp_exid=wholehealthchiro&amp;d3cp_source=My%20Website%27,%27newwindow%27,%20%27width=790px,%20top=0,%20left=0,%20toolbar=no,%20menubar=no,%20scrollbars=1,%20resizable=1,%20location=no,%20status=0">Read Our Reviews</a></dt>
+	<dd>%CLIENT_BUSINESSNAME% reviews run through Demand Force</dd>
+	<dd></dd>
+</dl>
+</article>
+
+
+CSS:
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.css"></script>
+
+<script https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.css>
+</script>
+
+<script>
+$(document).ready(function() {
+    $(".iframe").fancybox({
+        type: 'iframe'
+    });
+});
+</script>
+
+<style>
+
+a.iframe {
+    color: rgba(0,0,0,0.8)!important;
+}
+a.iframe:hover, a.iframe dt2:hover, a.iframe:hover dd2{
+    color: white!important;
+    text-decoration: none;
+}
+
+.article:hover dt2, article:hover dt2 span, article:hover a, article:hover dt2 {
+    color: white!important;
+    text-decoration: none;
+}
+
+.featured-services-module .cc_module_content dl2 article {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    min-height: 170px;
+    transition: all .25s linear;
+}
+
+
+.featured-services-module .cc_module_content dl2 article dt2 {
+    color: rgba(0,0,0,0.8);
+    font-size: 1.625rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0;
+    display: inline;
+}
+
+.featured-services-module .cc_module_content dl2 article dt2 dd2 {
+    font-size: 1.125rem;
+    color: rgba(0,0,0,0.8);
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 5px 0 5px 0;
+    padding-bottom: 40px;
+}
+
+.featured-services-module .cc_module_content dl2 article dt2 dd2:hover {
+ color: white;
+}
+
+.featured-services-module .cc_module_content dl2 article dt2 dd2:last-child {
+    color: #87b2d2;
+    position: absolute;
+    left: 50%;
+    bottom: 7px;
+    padding: 0;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    transform: translate(-50%, 0);
+}
+
+.featured-services-module .cc_module_content  dl2 article dt2 dd2:last-child::before {
+    font-size: 48px;
+    content: "\f18e";
+    position: relative;
+}
+
+.featured-services-module .cc_module_content dl2 article dt2 dd2:last-child:hover::before {
+ color: white!important;
+}
+
+.custom_content_module_2 div:nth-child(2) article:nth-child(2) {
+  margin-left: 1.16667%;
+}
+
+
+.iframe dl2:nth-child(1) article:nth-child(1) dt2:nth-child(1) span:nth-child(3) {
+  transform: translateY(-25%) translateX(0%);
+}
+
+
+</style>
+

@@ -1,0 +1,16 @@
+var x = 0;
+setInterval(function(){
+
+if (x === 0){
+
+(CODE HERE)
+
+x++;
+}
+
+else{
+    return;
+}
+
+}, 
+500);

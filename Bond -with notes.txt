@@ -1,0 +1,177 @@
+//https://na43.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=001&sen=500&sen=005&sen=a0H&sen=00O&str=286895
+var casenumberdata = '00286895'; //case number with two zero before the case number
+var casedatedata = '4/17/2017'; //case date
+var datenumber = 2; //total number of same case number and date in BOND
+var casesubjectdata01 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata02 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata03 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata04 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata05 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata06 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata07 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata08 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata09 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata10 = 'NO DATA SUBJECT'; //copy subject here
+var casesubjectdata11 = 'NO DATA SUBJECT'; //copy subject here
+//'NO DATA SUBJECT';
+
+var counter = 0; //match date counter manually input casesubjectdata above
+var counterdate = 0; //match date counter
+var counterdata; //match date counter manually input casesubjectdata above
+var datecounter = 0; //count date use if BOND and Salesforce date match
+
+//open new tab after search
+var casecode = $('th.dataCell > a:nth-child(1)').data('seclki');
+ if(casecode === null || casecode === '' || casecode === undefined)
+    { $('title').text('No Data Match'); } 
+ else {
+   var win = window.open('https://na43.salesforce.com/007?rlid=RelatedActivityList&closed=0&id='+ casecode + '&rowsperpage=300', '_blank');
+   var i = 0; 
+   if(i === 0) {
+      win.focus(); 
+      i = 1;  }
+}
+
+var casesubject; //subject stored
+var casedate2; //date stored
+
+//count all match date
+$('#bodyCell > div.listRelatedObject.taskBlock > div > div.pbBody > table > tbody > tr.dataRow').each(function(){
+    casesubject = $(this).find('th.dataCell > a').text();
+    casedate2 = $(this).find('td.dataCell.DateElement').first().text();
+    if (casedate2 === casedatedata && casesubject !== 'Order Client Press Release' && casesubject !== 'Order Monthly Blog Post' && casesubject !== 'Order Monthly Content Page') {
+        datecounter++;
+    }
+});
+//open all match date and subject in new tab
+$('#bodyCell > div.listRelatedObject.taskBlock > div > div.pbBody > table > tbody > tr.dataRow').each(function(){
+    //$(this).css({'background-color':'pink'}); 
+    casesubject = $(this).find('th.dataCell > a').text();
+    //$(this).css({'background-color':'pink'}); 
+    casedate2 = $(this).find('td.dataCell.DateElement').first().text();
+	if(casesubject === casesubjectdata01 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'pink'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+		$('title').text( counter + ' Data Found');
+	}
+		if(casesubject === casesubjectdata02 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'green'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata03 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'blue'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata04 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'red'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata05 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'brown'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata06 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'violet'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata07 && casedate2 === casedatedata && datecounter !== datenumber ) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'orange'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata08 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'gray'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata09 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'gold'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata10 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'beige'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		//$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata11 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'yellowgreen'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}   
+	    //click in new tab all date find if count date in BOND same as Salesforce
+	    if (datecounter === datenumber && casedate2 === casedatedata && casesubject !== 'Order Client Press Release'  && casesubject !== 'Order Monthly Blog Post' && casesubject !== 'Order Monthly Content Page') {
+	        $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		    $(this).find('th.dataCell > a')[0].click();
+	    }
+	    //add color on find date and subject | count how many same date found
+	    if (casedate2 === casedatedata) {
+	        $(this).find('td.dataCell.DateElement').first().css({'background-color':'yellow'});
+	        $(this).find('th.dataCell').css({'background-color':'yellowgreen'}); 
+	        counterdate++;
+	    }
+});
+//process counterdata and countercount to display in page title 
+	x = 0;
+	if (x === 0){
+	counterdata = counter;
+	countercount = counterdate - datecounter; //total exemption subject
+	x = 1;
+	}
+//if task not complete and casenumber and casedate is match	
+var taskstatus = $('#tsk12_ileinner').first().text();
+if(taskstatus !== 'Completed') {
+    var casenumber = $('#tsk3_ileinner a').first().text();
+        var casedate = $('.taskOverDue').first().text();
+    if(casenumber === casenumberdata && casedate === casedatedata){
+            $('#topButtonRow input:nth-child(9)')[0].click();
+      }
+}
+//display how many date match in title
+if(counterdata === null || counterdata === '' || counterdata === undefined || counterdata === 0){
+    { $('title').text(datecounter + ' Date Match'); } 
+}
+else {
+     $('title').text( counterdata + ' Subject Found');
+}
+//auto close window if task already complete
+if(taskstatus === 'Completed') {
+ $('title').text('Task Completed');
+ window.close();
+}    
+//display if no date match found
+if (casedate2 !== casedatedata && counter === 0 && datecounter === 0) {
+     $('title').text('No Date Match');
+}
+//if find subject name exemption like "Order Client Press Release", "Order Monthly Blog Post" and "Order Monthly Content Page" subject
+if (countercount !== 0) {
+    $('title').text( countercount + ' Date Exemption');
+}

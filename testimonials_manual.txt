@@ -1,0 +1,188 @@
+HTML:
+
+<h1>Testimonials</h1>
+
+<div id="items">
+
+<div class="item first">
+<h5 class="slides">"XXX"<br />
+? XXX</h5>
+</div>
+
+<div class="item">
+<h5 class="slides">"XXX"<br />
+? XXX</h5>
+</div>
+
+<div class="item">
+<h5 class="slides">"XXX"<br />
+? XXX</h5>
+</div>
+
+<div class="item">
+<h5 class="slides">"XXX"<br />
+? XXX</h5>
+</div>
+
+<div class="item">
+<h5 class="slides">"XXX"<br />
+? XXX</h5>
+</div>
+
+
+</div>
+
+<div style="margin-bottom: 50px">
+<ul id="controls">
+  <li id="prev">Prev</li>
+  <li id="play">Play</li>
+  <li id="pause">Pause</li>
+  <li id="next">Next</li>
+</ul>
+</div>
+
+
+<!--Slideshow script and CSS start-->
+
+<style>
+#items {
+    position : relative;
+    width : 95%;
+    height : 300px;
+    top : 20px;
+    left : 20px;
+}
+#items .item {
+    position : absolute;
+    width : 100%;
+    height : 298px;
+    display :none;
+    text-align : center;
+}
+#items .first{
+    display : block;
+}
+#controls {
+    margin-top : 30px;
+    text-align: center;
+}
+#controls li {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#controls #play {
+    display : none;
+}
+
+@media (max-width: 1252px) {
+#items {
+    height: 410px;
+} }
+
+@media (max-width: 414px) {
+#items {
+    height: 540px;
+} }
+
+.testimonials-module .wrapper-module {
+    width: 91.66667%!important;
+    margin-left: 4.16667%!important;
+}
+
+</style>
+
+
+<script>
+//To store timeout id
+var timeoutId;
+
+var slideImage = function( step ) {
+    
+    if ( step == undefined ) step = 1;
+    
+    //Clear timeout if any
+    clearTimeout ( timeoutId );
+    
+    //Get current image's index
+    var indx = $('.item:visible').index('.item');
+    
+    //If step == 0, we don't need to do any fadein our fadeout
+    if ( step != 0 ) {
+       //Fadeout this item
+       $('.item:visible').fadeOut();
+    }
+    
+    //Increment for next item
+    indx = indx + step ;
+    
+    //Check bounds for next item
+    if ( indx >= $('.item').length ) {
+        indx = 0;
+    } else if ( indx < 0 ) {
+        indx = $('.item').length - 1;
+    }
+    
+    //If step == 0, we don't need to do any fadein our fadeout
+    if ( step != 0 ) {
+       //Fadein next item
+       $('.item:eq(' + indx + ')').fadeIn();
+    }
+    
+    //Set Itmeout
+    timeoutId = setTimeout ( slideImage, 5000 );
+};
+
+$(document).ready(function(){
+//Start sliding
+slideImage(0);
+
+//When clicked on prev
+$('#prev').click(function() {
+
+    //slideImage with step = -1
+    slideImage ( -1 );   
+   //Hide Play and show Pause
+   $('#play').hide();
+   $('#pause').show(); 
+});
+   
+//When clicked on next
+$('#next').click(function() {
+        
+     //slideImage with step = 1
+     slideImage ( 1 );
+
+   //Hide Play and show Pause
+   $('#play').hide();
+   $('#pause').show(); 
+});
+                 
+//When clicked on Pause
+$('#pause').click(function() {
+
+   //Clear timeout
+   clearTimeout ( timeoutId );    
+    
+    //Hide Pause and show Play
+    $(this).hide();
+    $('#play').attr('style','display: inline-block;');
+});
+
+//When clicked on Play
+$('#play').click(function() {
+   
+   //Start slide image
+   slideImage(0);
+
+   //Hide Play and show Pause
+   $(this).hide();
+   $('#pause').show();    
+});
+});
+
+
+</script>

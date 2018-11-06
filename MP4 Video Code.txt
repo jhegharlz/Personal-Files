@@ -1,0 +1,5 @@
+<p style="text-align: center;">
+	<video style="max-width: 500px;" controls="" poster="http://my.chiromatrix.com/0004478/storage/app/media/videothumb.jpg">
+	<source src="http://my.chiromatrix.com/0004478/storage/app/media/pressure-wave-video-compress.mp4" type="video/mp4">
+	</video>
+</p>

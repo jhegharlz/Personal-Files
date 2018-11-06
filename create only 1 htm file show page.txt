@@ -1,0 +1,14 @@
+1. Create page
+<div class="wrap__page-content">
+    <div class="wrap__page-content--inner">
+        {% component 'editable2' file='test.htm' %}
+    </div>
+</div>
+2. add component alias (component name like editable), and file (name of file you want to open)
+3. Create layout
+            <div class="wrap__exclusive-offer-form">
+                <div class="wrap__exclusive-offer-form--inner">
+                    {% component "form_home" %}
+                </div>
+            </div>
+4. add component like html form "form_home"

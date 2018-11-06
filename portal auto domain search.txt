@@ -1,0 +1,56 @@
+x = 0;
+setInterval(function(){
+search_value = $('.grid-view .table .filters>td .filter-container #ClientContainersExt_container_url').val();
+search_value2 = $('#quickSearchForm #quickSearchValue').val();
+check_search = $('table tr td span').attr('class');
+trap1 = window.location.search;
+if(trap1 === '' && search_value2 !== '' && x === 0){
+    x++;
+window.open('https://portaladmin.imatrixbase.com/clients/provision/imatrix/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value2);
+window.open('https://portaladmin.imatrixbase.com/clients/provision/chiromatrix/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value2);
+window.open('https://portaladmin.imatrixbase.com/clients/provision/imatrixvet/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value2);
+}
+else {
+if(trap1 === '' && check_search == 'empty' && x === 0){
+    x++;
+
+window.open('https://portaladmin.imatrixbase.com/clients/provision/imatrix/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value);
+window.open('https://portaladmin.imatrixbase.com/clients/provision/chiromatrix/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value);
+window.open('https://portaladmin.imatrixbase.com/clients/provision/imatrixvet/manageWebsites/?searchSource=quickSearch&ClientContainersExt%5Bcontainer_url%5D=' + search_value);
+ }
+}
+
+if(check_search == 'empty' || search_value2 !== '') {
+     window.close();
+     window.location.reload();
+}
+
+settings_url = $('a[title="Settings"]').attr('href');
+setting_trap = window.location.href.slice(-14);
+if(x === 0 && settings_url !== undefined && setting_trap!=='manageWebsites'){
+    window.location = 'https://portaladmin.imatrixbase.com' + settings_url;
+}
+
+trap_open_newtab = window.location.href.slice(-12);
+if (x === 0 && trap_open_newtab == 'applications'){
+    x++;
+    new_url = window.location.href.replace(/applications/g,"containers");
+    window.location = new_url;
+}
+var lasttrap = 0;
+$('a.ng-binding').each(function(){
+    lasttrap++;
+});
+trap_open_newtab2 = window.location.href.slice(-4);
+console.log('Developed by: -jHeG')
+if (x === 0 && trap_open_newtab2 == 'main' || new_url2 === undefined){
+    x++;
+    $('a.ng-binding').each(function(){
+    new_url2 = $(this).attr('href');
+    new_url3 = $(this).attr('href').slice(0,25);
+    if (new_url2 !== undefined && new_url3 === 'http://my.chiromatrix.com' || lasttrap===1){
+     window.open(new_url2);
+    }
+    });
+}
+},1000);

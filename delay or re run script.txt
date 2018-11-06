@@ -1,0 +1,13 @@
+ setInterval(function() {
+         
+var thing = $('.featuredblock__container');
+         
+var x = 0;
+
+         if ( x === 0 ) {
+
+            thing.appendTo('.form-wrap__submit'); 
+  
+             x = 1;
+}
+      }, 10000);

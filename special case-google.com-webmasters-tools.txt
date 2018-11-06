@@ -1,0 +1,9 @@
+var x = window.location.href.slice(0,67);
+console.log(x);
+if (x === 'https://www.google.com/webmasters/verification/verification-success') {
+window.location = 'https://www.google.com/webmasters/tools/home?hl=en&authuser=1';
+}
+if(window.location.href === 'https://www.google.com/webmasters/tools/home?hl=en&authuser=1'){
+$('.goog-inline-block').trigger();
+console.log('test');
+}

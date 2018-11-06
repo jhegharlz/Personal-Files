@@ -1,0 +1,26 @@
+.social ul li a {
+  border:1px solid #FFFFFF;
+  border-radius:38px;
+  color:#FFFFFF;
+  display:block;
+  font-size:1.25em;
+  height:38px;
+  line-height:30px;
+  padding:0.125em;
+  text-align:center;
+  text-decoration:none;
+  transition:all 0.25s linear;
+  width:38px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  -webkit-font-smoothing:antialiased;
+  font-family:chiro-icons;
+  font-style:normal;
+  font-variant-caps:normal;
+  font-variant-ligatures:normal;
+  font-weight:normal;
+  line-height:1;
+  speak:none;
+  text-transform:none;
+}

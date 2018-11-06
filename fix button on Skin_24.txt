@@ -1,0 +1,1 @@
+.exclusive_offer form div .submit_info { bottom: 20px; right: 22px;}

@@ -1,0 +1,31 @@
+var groupvalue = $('.bPageBlock .reportOutput .tabularReportTable .breakRowClass0Top > td span.groupvalue').first().text();
+if(groupvalue === 'ADS'){
+    var x = $('.bPageBlock .reportOutput .tabularReportTable .breakRowClass0Top > td span.recordcount').first().text(); 
+    if(x === null || x === '' || x === undefined) { $('title').text('No ADS Queue'); } 
+    else { $('title').text('ADS has ' + x ); 
+    var href = $('#fchArea > table > tbody > tr:nth-child(4) > td:nth-child(3) > a').attr('href'); 
+    var win = window.open(href + '/a?newOwn=Harold%20', '_blank'); var i = 0; 
+    if(i === 0) {
+      win.focus(); 
+      i++;  }
+  else { alert('Please allow popups for this website'); }
+     } 
+ } 
+
+else {
+   $('title').text('No ADS Queue'); 
+   setInterval(function(){  
+     var z = 0;
+     if ( z === 0 ) {
+     location.reload();
+ 	z = 1;
+    }}, 1000);
+  }
+  
+setInterval(function(){  
+var y = 0;
+if ( y === 0 ) {
+    $('#bottomButtonRow input')[0].click();
+   	y = 1;
+}}, 500);
+setInterval(function(){ location.reload(); }, 2000);

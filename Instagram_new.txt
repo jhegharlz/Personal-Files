@@ -1,0 +1,11 @@
+<style>
+
+.icon-instagram {
+    background: url(http://drvassa.com/images/new_instagram_icon.png) no-repeat 50%;
+}
+
+.icon-instagram:hover{
+   background: url(http://drvassa.com/images/hover_new_instagram_icon.png) no-repeat 50%;
+}
+
+</style>

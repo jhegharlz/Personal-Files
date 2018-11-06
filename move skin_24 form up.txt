@@ -1,0 +1,1 @@
+h2.headline { display: none; } @media (min-width: 992px){ .homepage .exclusive-offer-module { transform: translateY(-33%) translateX(-50%); }}

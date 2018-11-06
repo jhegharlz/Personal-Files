@@ -1,0 +1,45 @@
+Add to Settings > Tag Manager > Footer Tags:
+
+<div id="ada-toolbar" class="ada_toolbar left">
+<div class="ada_toolbar--content">
+<a href="#" data-modal-id="ada-modal-on" data-action="modal" class="ada_toolbar--opener" title="Accessibility View" tabindex="0">
+Accessibility View
+</a>
+<a href="#" data-modal-id="ada-modal-off" data-action="modal" class="ada_toolbar--close" title="Close toolbar" tabindex="0">
+<span>Close toolbar</span>
+</a>
+</div>
+<div id="ada-modal-on" class="ada_modal" style="display: none;">
+<div class="ada_modal--container">
+<p class="ada_modal--description">Would you like to switch to the accessible version of this site?</p>
+<a href="#" tabindex="0" class="ada_modal--link" title="Go to accessible site" data-action="accessible">Go to accessible site</a>
+<a href="#" tabindex="1" class="ada_modal--close" title="Close modal window" data-action="close">
+<span>Close modal window</span>
+</a>
+</div>
+</div>
+<div id="ada-modal-off" class="ada_modal" style="display: none;">
+<div class="ada_modal--container">
+<p class="ada_modal--description">Don't need the accessible version of this site?</p>
+<a href="#" tabindex="0" class="ada_modal--link" title="Hide the accessibility button" data-action="remove-accessible">Hide the accessibility button</a>
+<a href="#" tabindex="1" class="ada_modal--close" title="Close modal window" data-action="close">
+<span>Close modal window</span>
+</a>
+</div>
+</div>
+</div>
+
+-------------------------------------------------------------------------------
+
+Add to Custom CSS:
+#ada-toolbar:nth-child(1) {
+    display: none;
+}
+
+OR
+
+#ada-toolbar:nth-child(1) .ada_toolbar--content {
+    
+display: none;
+
+}

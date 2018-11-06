@@ -1,0 +1,16 @@
+<script>
+$('#btn').click(function() {
+    alert('something');
+});
+</script>
+
+
+
+<p><script type="text/javascript">
+
+window.open(
+  'https://www.mychirotouch.com/SelfScheduler/index.aspx?clientid=BILC0009',
+  '_blank' 
+);
+
+</script></p>

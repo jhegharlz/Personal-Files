@@ -1,0 +1,11 @@
+$('.owl-carousel  .owl-item > .item').each(function(){
+    console.log($(this).html());
+    console.log($(this).find('img').attr('src'));
+ var imghtml = $(this).html();
+ var imglink = $(this).find('img').attr('src');
+
+	if(imglink !== null || imglink !== '' || imglink !== undefined) {
+	var replacecode = '<a class="iframe" href="' + imglink + '">' + imghtml + '</a>';
+	$(this).find('img').replaceWith(replacecode);
+	}
+})

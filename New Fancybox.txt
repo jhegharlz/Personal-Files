@@ -1,0 +1,20 @@
+HEAD:
+<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://fancyapps.com/fancybox/source/jquery.fancybox.pack.js?v=2.0.5"></script>
+  <link rel="stylesheet" type="text/css" href="http://fancyapps.com/fancybox/source/jquery.fancybox.css?v=2.0.5" media="screen" />
+
+HTML:
+<p align="center"><a id="videolinks" href="#rayban"><img src="https://my.imatrix.com/0026578/storage/app/media/Ray-Ban.jpg" style="width: 200px; border: 1px solid #000;"></a></p>
+<div id="rayban" style="display: none;"><video controls="controls" style="width: 100%; max-width: 315px;" src="//my.imatrix.com/0026578/storage/app/media/_08312018/IMG_2213-2.mp4"></video></div>
+
+Script:
+setInterval(function() {
+    $("#videolinks").fancybox({
+        openEffect: 'elastic',
+        openEasing: 'easeOutBack',
+        openSpeed: '600',
+    
+        closeEffect: 'elastic',
+        closeEasing: 'easeInBack'
+    });
+},500);

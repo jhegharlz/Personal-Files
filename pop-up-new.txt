@@ -1,0 +1,76 @@
+HTML:
+<div id="imagescontainer">
+<div align="center" class="showimages" id="opentoms"><a class="close-modal" href="#">&times;</a>
+
+<h2 style="text-align: center; color: #68f7fe">Milwaukke Shepherd is asking for nomination of the</h2>
+
+<h1 style="color: #68f7fe;">&quot;Best of Milwaukee 2018 - All That&rsquo;s Best in Milwaukee&quot;</h1>
+
+<h3 style="color: #68f7fe">Milwaukee&#39;s oldest, largest and most prestigious reader&rsquo;s choice awards program click below to vote for us</h3>
+
+<h2 style="color: #fe9c9c;"><br />
+<a href="https://shepherdexpress.com/best-of-milwaukee/2018#/gallery?group=296909" style="color: #fe9c9c; font-weight: 500;" target="_blank">https://shepherdexpress.com/best-of-milwaukee/2018#/gallery?group=296909</a></h2>
+
+</div>
+</div>
+
+
+CSS:
+<style>
+#imagescontainer {
+    z-index: 9999;    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility:hidden;
+    display:none;
+    background-color: rgba(22,22,22,0.5);
+    cursor: pointer;
+}
+.showimages {
+    border-radius: 15px;
+    background:#e1e1e1; 
+    margin: 0 auto;
+    width:90%; 
+    max-width: 900px;
+    position:relative; 
+    z-index:41;
+    top: 20%;
+    padding: 30px 10px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+    background-color: rgba(49, 86, 163, .8);
+}
+.showimages img{
+    padding: 10px;
+}
+
+
+a.close-modal {
+    right: 10px;
+    position: absolute;
+    top: 5px;
+    font-size: 2.3em;
+    text-decoration: none;
+    color: #68f7fe;
+}
+</style>
+
+SCRIPT:
+<script>
+setTimeout(function(){
+$('#imagescontainer').prependTo('body')
+    $('#imagescontainer').css('visibility','visible');
+    $('#imagescontainer').css('display','block');
+setTimeout(function(){
+    $('#imagescontainer').css('visibility','hidden');
+    $('#imagescontainer').css('display','none');
+},20000);
+$('.close-modal').click(function(){
+    $('#imagescontainer').hide();
+});
+
+},2000);
+
+</script>

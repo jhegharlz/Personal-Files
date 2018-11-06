@@ -1,0 +1,160 @@
+//https://na43.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=001&sen=500&sen=005&sen=a0H&sen=00O&str=312223
+var casenumberdata = '00312223';
+var casedatedata = '4/30/2017';
+var datenumber = 22;
+var casesubjectdata01 = 'NO DATA SUBJECT';
+var casesubjectdata02 = 'NO DATA SUBJECT';
+var casesubjectdata03 = 'NO DATA SUBJECT';
+var casesubjectdata04 = 'NO DATA SUBJECT';
+var casesubjectdata05 = 'NO DATA SUBJECT';
+var casesubjectdata06 = 'NO DATA SUBJECT';
+var casesubjectdata07 = 'NO DATA SUBJECT';
+var casesubjectdata08 = 'NO DATA SUBJECT';
+var casesubjectdata09 = 'NO DATA SUBJECT';
+var casesubjectdata10 = 'NO DATA SUBJECT';
+var casesubjectdata11 = 'NO DATA SUBJECT';
+//'NO DATA SUBJECT';
+
+var counter = 0;
+var counterdata;
+var datecounter = 0;
+
+var casecode = $('th.dataCell > a:nth-child(1)').data('seclki');
+ if(casecode === null || casecode === '' || casecode === undefined)
+    { $('title').text('No Data Match'); } 
+ else {
+   var win = window.open('https://na43.salesforce.com/007?rlid=RelatedActivityList&closed=0&id='+ casecode + '&rowsperpage=300', '_blank');
+   var i = 0; 
+   if(i === 0) {
+      win.focus(); 
+      i = 1;  }
+}
+var casesubject;
+var casedate2;
+$('#bodyCell > div.listRelatedObject.taskBlock > div > div.pbBody > table > tbody > tr.dataRow').each(function(){
+    casedate2 = $(this).find('td.dataCell.DateElement').first().text();
+    if (casedate2 === casedatedata) {
+        datecounter++;
+    }
+});
+
+$('#bodyCell > div.listRelatedObject.taskBlock > div > div.pbBody > table > tbody > tr.dataRow').each(function(){
+    //$(this).css({'background-color':'pink'}); 
+    casesubject = $(this).find('th.dataCell > a').text();
+    //$(this).css({'background-color':'pink'}); 
+    casedate2 = $(this).find('td.dataCell.DateElement').first().text();
+	if(casesubject === casesubjectdata01 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'pink'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+		$('title').text( counter + ' Data Found');
+	}
+		if(casesubject === casesubjectdata02 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'green'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata03 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'blue'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata04 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'red'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata05 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'brown'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata06 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'violet'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata07 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'orange'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata08 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'gray'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata09 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'gold'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata10 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'beige'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		//$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+		if(casesubject === casesubjectdata11 && casedate2 === casedatedata && datecounter !== datenumber) {
+	    //console.log("success");
+	    $(this).find('th.dataCell > a').css({'background-color':'yellowgreen'}); 
+	    $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		$(this).find('th.dataCell > a')[0].click();
+		counter++;
+	}
+	    if (datecounter === datenumber && casedate2 === casedatedata) {
+	        $(this).find('th.dataCell > a').attr({'target':'_blank'});
+		    $(this).find('th.dataCell > a')[0].click();
+	    }
+	    if (casedate2 === casedatedata) {
+	        $(this).find('td.dataCell.DateElement').first().css({'background-color':'yellow'});
+	    }
+});
+
+	x = 0;
+	if (x === 0){
+	counterdata = counter;
+	x = 1;
+	}
+	
+var taskstatus = $('#tsk12_ileinner').first().text();
+if(taskstatus !== 'Completed') {
+    var casenumber = $('#tsk3_ileinner a').first().text();
+        var casedate = $('.taskOverDue').first().text();
+    if(casenumber === casenumberdata && casedate === casedatedata){
+            $('#topButtonRow input:nth-child(9)')[0].click();
+      }
+}
+ if(counterdata === null || counterdata === '' || counterdata === undefined || counterdata === 0){
+    { $('title').text(datecounter + ' Date Match'); } 
+}
+else {
+     $('title').text( counterdata + ' Date Found');
+}
+if(taskstatus === 'Completed') {
+ $('title').text('Task Completed');
+ window.close();
+}    
+
+if (casedate2 !== casedatedata && counter === 0 && datecounter === 0) {
+     $('title').text('No Date Match');
+}

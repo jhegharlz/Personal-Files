@@ -1,0 +1,8 @@
+setInterval(function(){
+if ($(window).width() < 1200) {
+$('.holder__phone').insertAfter('.wrap__header--inner__top .container .wrap__navigationHeader');
+}
+else {
+$('.holder__phone').insertAfter('.wrap__header--inner__bottom .bottom__inner--right .holder__social');    
+}
+},500);

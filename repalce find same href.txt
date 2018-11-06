@@ -1,0 +1,10 @@
+<script>
+setInterval(function(){
+$('a[href*="http://www.travismanion.org/"]').replaceWith('<a href="http://www.travismanion.org/" target="_blank">Register Now</a>');
+}, 500);
+</script>
+
+
+setInterval(function(){
+$('a[href*="http://7195931969.com"]').replaceWith('<a href="tel:7195931969" target="_blank">Call Now!</a>');
+}, 500);
