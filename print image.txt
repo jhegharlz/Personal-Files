@@ -1,0 +1,4 @@
+<p>Bring this coupon in and receive $25 off your next eyeglass purchase. <br>See staff for details.</p>
+
+<p><a target="_blank" href="#"><img src="//my.imatrix.com/0011995/storage/app/media/special-offer/coupon-25off.png" data-image="coupon-25off.png" alt="Eye Exam Coupon" onclick="newWindow = window.open('//my.imatrix.com/0011995/storage/app/media/special-offer/coupon-25off.png');
+    newWindow.print();"></a></p>

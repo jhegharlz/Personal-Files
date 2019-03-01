@@ -1,0 +1,29 @@
+valstoreitem = sessionStorage.getItem("firstrun");
+
+if(valstoreitem == 1){
+    $('.itempopup').attr('style','display:none!important;');
+}
+else {
+    $('.itempopup').attr('style','display:block!important;');
+}
+sessionStorage.setItem("firstrun","1");
+
+$('.itempopup').click(function() {
+    $('.itempopup').hide();
+});
+
+
+CSS:
+.itempopup {
+    position: fixed;
+    z-index: 99999999;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #0000006e;
+}
+
+HTML:
+<div class="itempopup" align="center" style="display:none">
+<img src="/storage/app/media/movingtoanewlocation.jpg" style="width: 550px; margin-top: 122px; padding: 0 10px;">
+</div>

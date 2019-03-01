@@ -3,3 +3,8 @@ $('.slider__video video').prop('muted', true);
 $('.slider__video video').attr('autoplay', true);
 $('.slider__video video')[0].play();
 },500);
+
+$('video').click(function(){
+    $(this).attr('autoplay', true);
+    $(this)[0].play();
+});

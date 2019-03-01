@@ -35,7 +35,12 @@
     label,
     legend,
     fieldset,
-    input, 
-    textarea {
-         font-family: 'Avenir'!important;
+    input, textarea, h1, h2, h3, h4, h5, h6 {
+         font-family: 'avenir-next-medium'!important;
     }
+
+.icon {
+    font-family: font-awesome!important;
+}
+
+

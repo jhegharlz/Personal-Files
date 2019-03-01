@@ -1,0 +1,14 @@
+$(this).scroll(function(){
+  $('.acc-freview-img').addClass('fixedscroll');
+});
+
+window.onscroll = function(ev)
+{
+	var B = document.body; //IE 'quirks'
+        var D= document.documentElement; //IE with doctype
+        D = (D.clientHeight)? D: B;
+	if ( D.scrollTop === 0 )
+		{
+			$('.acc-freview-img').removeClass('fixedscroll');
+		}        
+};

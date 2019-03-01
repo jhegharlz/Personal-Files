@@ -1,0 +1,9 @@
+$('.navigation__list--sub').each(function(){
+    $(this).find('.navigation__item.has-child').hover(function(){
+        $(this).find('.navigation__list--sub--sub').css('display','block');
+        $(this).addClass('open');
+    },function(){
+        $(this).find('.navigation__list--sub--sub').css('display','none');
+        $(this).removeClass('open');
+    });
+});
