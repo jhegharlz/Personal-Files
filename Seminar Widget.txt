@@ -1,0 +1,119 @@
+<div class="seminars_1">
+<h3 class="seminar_daysleft"><span id="daysleft_1">X</span> day(s) left to register for Our next upcoming seminar:<h3>
+<h3 class="seminar_info" data-month="9" data-day="23">
+September 23rd <br>
+Neuropathy Informational Seminar <br>
+Courtyard by Marriott <br>
+245 Half Mile Road, Lincroft <br>
+Beginning at 7PM
+</h3>		
+</div>
+
+<div class="seminars_2">
+<h3 class="seminar_daysleft"><span id="daysleft_2">X</span> day(s) left to register for:<h3>
+<h3 class="seminar_info" data-month="9" data-day="23">
+September 23rd <br>
+Neuropathy Informational Seminar <br>
+Courtyard by Marriott <br>
+245 Half Mile Road, Lincroft <br>
+Beginning at 7PM
+</h3>		
+</div>
+
+
+SCRIPT:
+
+var counter1 = 0;
+var counter2 = 0;
+var d = new Date();
+
+var month = d.getMonth()+1;
+var day = d.getDate();
+
+var output_year = d.getFullYear()
+var output_month = ((''+month).length<2 ? '0' : '') + month;
+var output_day = ((''+day).length<2 ? '0' : '') + day;
+var month = output_month;
+output_month = parseInt(output_month + '00');
+output_day =  parseInt(output_day);
+
+var output_monthday = output_month + output_day;
+
+$('.seminars_1 .seminar_info').each(function(){
+  
+var data_month = parseInt($(this).attr('data-month') + '00');
+var data_day = parseInt($(this).attr('data-day'));  
+
+var data_monthdate = data_month + data_day;
+
+
+if (output_year == 2019) {
+    
+   if(output_monthday <= data_monthdate && counter1 === 0) {
+    $(this).addClass('showdata');
+    $(this).removeClass('hidedata');
+    counter1++;
+   }
+   else {
+    $(this).addClass('hidedata');
+    $(this).removeClass('showdata');
+   }
+}
+});
+$('.seminars_2 .seminar_info').each(function(){
+  
+var data_month = parseInt($(this).attr('data-month') + '00');
+var data_day = parseInt($(this).attr('data-day'));  
+
+var data_monthdate = data_month + data_day;
+
+
+if (output_year == 2019) {
+    
+   if(output_monthday <= data_monthdate && counter2 <= 1) {
+      $(this).addClass('showdata');
+      $(this).removeClass('hidedata');
+    counter2++;
+   }
+   else {
+    $(this).removeClass('showdata');
+    $(this).addClass('hidedata');
+   }
+}
+});
+
+$('.seminars_2 .seminar_info.showdata').first().hide();
+
+var daysleft1_month = $('.seminars_1 .seminar_info.showdata').attr('data-month');
+var daysleft1_day = $('.seminars_1 .seminar_info.showdata').attr('data-day');
+
+const oneDay1 = 24 * 60 * 60 * 1000;
+const firstDate1 = new Date(output_year, daysleft1_month, daysleft1_day);
+const secondDate1 = new Date(output_year, month, output_day);
+
+const diffDays1 = Math.round(Math.abs((firstDate1 - secondDate1) / oneDay1));
+
+$('.seminars_1 #daysleft_1').text(diffDays1);
+
+
+var daysleft2_month = $('.seminars_2 .seminar_info.showdata').last().attr('data-month');
+var daysleft2_day = $('.seminars_2 .seminar_info.showdata').last().attr('data-day');
+
+const oneDay2 = 24 * 60 * 60 * 1000;
+const firstDate2 = new Date(output_year, daysleft2_month, daysleft2_day);
+const secondDate2 = new Date(output_year, month, output_day);
+
+const diffDays2 = Math.round(Math.abs((firstDate2 - secondDate2) / oneDay2));
+
+$('.seminars_2 #daysleft_2').text(diffDays2);
+
+
+
+
+if (isNaN(diffDays1)) {
+    $('.embedcode_seminarswidget__container').hide();
+}
+
+if (isNaN(diffDays2)) {
+    $('.seminars_2').hide();
+}
