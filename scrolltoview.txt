@@ -1,0 +1,20 @@
+function ScrollToBottom(){
+var objDiv = document.getElementById("scrollingContainer");
+objDiv.scrollIntoView();
+}
+
+
+$(this).scroll(function(){
+  $('#down-arrow').hide();
+});
+
+window.onscroll = function(ev)
+{
+	var B = document.body; //IE 'quirks'
+        var D= document.documentElement; //IE with doctype
+        D = (D.clientHeight)? D: B;
+	if ( D.scrollTop === 0 )
+		{
+			$('#down-arrow').show();
+		}        
+};

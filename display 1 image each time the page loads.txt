@@ -1,0 +1,20 @@
+var outputdata = '';
+var oakleyimg = localStorage.getItem('imgnumber');
+
+if (oakleyimg == 13) {
+    oakleyimg = 0;
+}
+
+if (oakleyimg === 'NaN') {
+    oakleyimg = 1;
+}
+else {
+    oakleyimg++;
+}
+var oakleydata = oakleyimg;
+
+if(typeof(Storage) !== "undefined"){
+    localStorage.setItem("imgnumber", oakleydata );
+    outputdata = '<img src="//my.imatrix.com/0005039/storage/app/media/oakley/oakley-' + oakleydata + '.jpg">';
+    document.getElementById("oakley").innerHTML = outputdata;
+}
