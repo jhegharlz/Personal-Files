@@ -1,0 +1,30 @@
+Script:
+if ($(window).width() <= 767) {
+
+var distance = $('.wrap__navigationHeader').offset().top,
+    $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= distance ) {
+        // Your div has reached the top
+        
+        $('.wrap__navigationHeader').addClass('fixedmobile');
+    }
+    else {
+        $('.wrap__navigationHeader').removeClass('fixedmobile');
+    }
+});
+}
+
+
+
+CSS:
+.fixedmobile {
+    position: fixed;
+    background-color: rgba(64, 156, 179, 1);
+    width: 100%;
+    top: -8px;
+}
+.wrap__slider {
+    clear: both;
+}

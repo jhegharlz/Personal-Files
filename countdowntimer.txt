@@ -1,0 +1,202 @@
+HTML
+<div class="wrappertime">
+  <div class="containertimer text-center">
+    <div class="col-md-3 col-xs-6">
+      <div class="clock">
+        <div class="well top-pane">
+          <div id="days" class="num">00</div>
+        </div>
+        <div class="well bottom-pane">
+          <div id="days-text" class="text">Days</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="clock">
+        <div class="well top-pane">
+          <div id="hours" class="num">00</div>
+        </div>
+        <div class="well bottom-pane">
+          <div id="hours-text" class="text">Hours</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="clock">
+        <div class="well top-pane">
+          <div id="mins" class="num">00</div>
+        </div>
+        <div class="well bottom-pane">
+          <div id="mins-text" class="text">Minutes</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="clock">
+        <div class="well top-pane">
+          <div id="secs" class="num">00</div>
+        </div>
+        <div class="well bottom-pane">
+          <div id="secs-text" class="text">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+CSS:
+.wrappertime {
+    position: absolute;
+    top: 37%;
+    right: 10%;
+    width: 100%;
+}
+
+.containertimer {
+    background: transparent;
+    color: #ffffff;
+    max-width: 340px;
+    display: block;
+    float: right;
+    width: 100%;
+}
+
+.bluelight {
+  text-shadow: 0 0 10px #3498DB,
+               0 0 20px #3498DB,
+               0 0 30px #3498DB,
+               0 0 40px #2980B9,
+               0 0 70px #2980B9,
+               0 0 80px #2980B9,
+               0 0 100px #2980B9,
+               0 0 150px #2980B9;
+}
+
+.clock {
+    overflow: hidden;
+}
+
+.wrappertime .col-md-12 {
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.top-pane {
+  margin-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #34495E;
+  border: 0px;
+}
+
+.bottom-pane {
+  margin-top: 0px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: #2C3E50;
+  border: 0px;
+}
+.wrappertime .col-md-3.col-xs-6 {
+    display: inline-block;
+    width: 100%;
+    max-width: 80px;
+}
+
+@media (min-width: 768px) {
+  .wrappertime .num {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrappertime .num {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrappertime .text {
+    font-size: 15px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .wrappertime .containertimer {
+    padding-top: 20px;
+  }
+}
+
+.wrappertime h1 {
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .wrappertime h1 {
+    margin-bottom: 75px;
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .wrappertime {
+    top: 60%;
+ }
+ .wrappertime .containertimer {
+    float: none;
+    margin: auto;
+ }
+ .wrappertime {
+    right: 0;
+ }
+ .slider__text {
+     top: 40%!important;
+ }
+ .wrappertime {
+     z-index: 100;
+ }
+}
+
+
+SCRIPT:
+
+$('.wrappertime').appendTo('.slider');
+
+function timeLeft(endtime){
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+};
+
+$(document).ready(function() {
+  var today = new Date();
+  var deadline = (today.getFullYear() + 1) + " 00:00:00";
+  if (today.getFullYear() > 2019) {
+    $('.wrappertime').hide();
+  };
+  
+  $(".clock").hover(function() {
+    $(this).toggleClass('bluelight');
+  });
+  
+  var setClock = function(newyear){
+    var timeinterval = setInterval(function(){
+      var t = timeLeft(newyear);
+      $('#days').text(t.days);
+      $('#hours').text(t.hours);
+      $('#mins').text(('0' + t.minutes).slice(-2));
+      $('#secs').text(('0' + t.seconds).slice(-2));
+    },1000);
+  };
+  setClock(deadline);
+});
+
+
+
